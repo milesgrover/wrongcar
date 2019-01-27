@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Oswald|Rokkitt');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    color: #ddd;
+    --red: #c71742;
+    --red-dark: #700e27;
+    font-family: Monsterrat, sans-serif;
+    font-size: 18px;
+    line-height: 1.25;
+    padding-bottom: 100px;
+}
+
+body.wc-modal-open {
+    height: 100%;
+    overflow: hidden;
+}
+
+a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    background: var(--red);
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    margin-top: 18px;
+}
+
+.wc-main-container {
+    
+    max-width: 1024px;
+    margin: 0 auto;
+
+}
+
+.wc-site-header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    width: 100%;
+    font-family: Rokkitt, serif;
+}
+
+.wc-site-header-img {
+    display: block;
+    max-width: 100%;
+}
+
+.wc-site-header-img:hover {
+    background: transparent;
+}
+
+.wc-site-nav {
+    width: 100%;
+}
+
+.wc-site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.wc-site-nav ul li {
+    padding: 8px 16px;
+}
+
+.wc-site-nav ul li:first-child {
+    padding-left: 0;
+}
+
+.wc-site-nav ul li:last-child {
+    padding-right: 0;
+}
+
+.wc-site-nav a {
+    font-size: 36px;
+    line-height: 1;
+    padding: 5px 0;
+    white-space: nowrap;
+    color: var(--red);
+    text-decoration: none;
+    position: relative;
+}
+
+.wc-site-nav a:hover {
+    background: transparent;
+}
+
+.wc-site-nav a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--red);
+    transform: scaleX(0);
+    transition: transform 400ms ease;
+}
+
+.wc-site-nav a:hover:after,
+.wc-site-nav .wc-current-nav-item a:after {
+    transform: scaleX(1);
+}
+
+.wc-content-heading {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.wc-news-article {
+    margin-top: 50px;
+}
+
+.wc-content-heading + .wc-news-article {
+    margin-top: 16px;
+}
+
+.wc-news-article .wc-article-heading {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.wc-news-article .wc-article-heading a {
+    color: #000;
+    background: #fff;
+    padding: 0 2px;
+}
+
+.wc-news-article .wc-article-heading a:hover {
+    color: var(--red);
+}
+
+.wc-news-article .wc-article-heading span:after {
+    content: " \25be";
+}
+
+.wc-news-article .wc-article-heading + p {
+    margin-top: 9px;
+}
+
+.wc-news-article img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 18px;
+    border: 18px solid rgba(255,255,255, 0.2);
+}
+
+/* Gigography */
+.wc-gigography {
+    display: flex;
+    margin-top: 40px;
+    font-family: Oswald, sans-serif;
+}
+
+.wc-gigography-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+}
+
+.wc-gigography-menu a {
+    font-size: 40px;
+    line-height: 53px;
+    margin-top: 20px;
+    padding-right: 30px;
+    padding-left: 4px;
+    padding-bottom: 3px;
+    border-right: 3px solid transparent;
+}
+
+.wc-gigography-menu a:hover,
+.wc-gigography-menu a.current {
+    color: #fff;
+    border-right-color: var(--red-dark);
+}
+
+.wc-gigography-menu a.current {
+    background-color: var(--red);
+}
+
+.wc-gigography-menu a:first-child {
+    margin-top: 0;
+}
+
+.wc-gigography-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wc-gigography-table thead tr {
+    background-color: var(--red);
+}
+
+.wc-gigography-table th {
+    font-size: 30px;
+    height: 56px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.wc-gigography-table th,
+.wc-gigography-table td {
+    text-align: left;
+    padding: 0 16px;
+    vertical-align: middle;
+}
+
+.wc-gigography-table td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.wc-gigography-table tbody tr:first-child td {
+    padding-top: 16px;
+}
+
+.wc-gigography-table tbody td button {
+    background: var(--red);
+    border: 0;
+    font-family: inherit;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 500px;
+}
+
+.wc-gigography-table tbody td button:hover {
+    background: #fff;
+    color: var(--red);
+}
+.wc-gigography-table tbody td button:focus {
+    outline: 0;
+}
+
+/* set list */
+.wc-setlist-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.wc-setlist {
+    background: url(img/setlist-header.jpg) no-repeat center top;
+    background-color: #fff;
+    width: 600px;
+    max-height: calc(100% - 24px);
+    box-sizing: border-box;
+    padding-top: 114px;
+    font-family: Arial, sans-serif;
+    color: #000;
+    text-align: center;
+    flex-direction: column;
+    display: none;
+}
+
+.wc-setlist-container.wc-setlist-show,
+.wc-setlist.wc-setlist-show {
+    display: flex;
+}
+
+.wc-setlist h1,
+.wc-setlist h2 {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.wc-setlist ul {
+    overflow: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+    padding-bottom: 100px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* lyrics */
+.wc-lyrics-albums {
+    margin-top: 40px;
+    display: grid;
+    grid-column-gap: 8px;
+    grid-auto-flow: column;
+    max-width: 100%;
+    grid-template-columns: repeat(min-content);
+}
+
+.wc-lyrics-albums img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 150ms ease-in-out;
+    transform: scale(1) rotate(0);
+    position: relative;
+    z-index: 1;
+}
+.wc-lyrics-albums img:hover {
+    transform: scale(1.1) rotate(8deg);
+    z-index: 2;
+    box-shadow: 0 2px 15px 5px rgba(0, 0, 0, 0.3);
+}
